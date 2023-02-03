@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useState,useMemo } from 'react';
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
 
   const doubleNumber = useMemo(()=>{
     return slowFunction(number);
-  },[number])
+  })
 
   const themeStyles=useMemo(()=>{
     return{
