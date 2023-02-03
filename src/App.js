@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useEffect, useState,useMemo } from 'react';
+import { useEffect, useState,useMemo, useCallback } from 'react';
 
 function App() {
 
@@ -23,7 +23,7 @@ function App() {
       backgroundColor: dark? 'black' :'white',
       color: dark ? 'white' : 'black'
     }
-  },[])
+  },[dark])
 
   useEffect(()=>{
     console.log('theme changed');
